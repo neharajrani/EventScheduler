@@ -27,8 +27,13 @@ const Welcome = () => {
                 fontSize: 40,
                 fontWeight: "bold",
                 color: "black",
+                borderColor: "black",
                 backgroundColor: "yellow",
+                borderWidth: 4,
+                
                 paddingHorizontal: 10,
+                
+                
               }}>
               EVENT
             </Text>
@@ -36,11 +41,13 @@ const Welcome = () => {
               style={{
                 fontSize: 25,
                 fontWeight: "bold",
-                color: "#fff",
-                borderColor: "yellow",
-                borderWidth: 2,
+                color: "#12f7ff",
+                borderColor: "#12f7ff",
+              backgroundColor: "black",
+                borderWidth: 4,
                 padding: 12,
                 width: 233,
+                marginTop:   5,
               }}>
               SCHEDULER APP
             </Text>
