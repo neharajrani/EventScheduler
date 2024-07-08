@@ -1,76 +1,54 @@
 import AnDesign from "react-native-vector-icons/AntDesign";
+import { COLORS } from "../../constants/Colors";
 import Details from "../../pages/Details";
 import Home from "../../pages/Home";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { NavigationContainer } from "@react-navigation/native";
+import MaterialIcons from "react-native-vector-icons/MaterialIcons";
+import Profile from "../../pages/ProfileScreen";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { useState } from "react";
 
 const Tab = createMaterialBottomTabNavigator();
 
-const BottomTabNavigation = () => {
-  const [tabBackground, setTabBackground] = useState();
+const BottomTabNavigation = ({ navigation }) => {
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-        activeColor="black"
-        inactiveColor="#3e2465"
-        barStyle={{
-          backgroundColor: tabBackground,
-        }}>
-        <Tab.Screen
-          name="Feed"
-          component={Home}
-          listeners={{
-            tabPress() {
-              setTabBackground("skyblue");
-            },
-          }}
-          options={{
-            tabBarLabel: "Home",
-            tabBarIcon: ({ color }) => (
-              <AnDesign name="home" color={color} size={26} />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="Notifications"
-          component={Details}
-          listeners={{
-            tabPress() {
-              setTabBackground("pink");
-            },
-          }}
-          options={{
-            tabBarLabel: "Updates",
-            tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons
-                onPre
-                name="bell"
-                color={color}
-                size={26}
-              />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="Profile"
-          component={Home}
-          listeners={{
-            tabPress() {
-              setTabBackground("lightgreen");
-              
-            },
-          }}
-          options={{
-            tabBarLabel: "Profile",
-            tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons name="account" color={color} size={26} />
-            ),
-          }}
-        />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <Tab.Navigator
+      activeColor="black"
+      inactiveColor={COLORS.PRIMARY_COLORds}
+      barStyle={{
+        backgroundColor: COLORS.TAB_COLOR,
+      }}>
+      <Tab.Screen
+        name="Home"
+        component={Home}
+        options={{
+          tabBarLabel: "Events",
+          tabBarIcon: ({ color }) => (
+            <AnDesign name="home" color={color} size={26} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Details"
+        component={Details}
+        options={{
+          tabBarLabel: "Add",
+          tabBarIcon: ({ color }) => (
+            <AnDesign name="pluscircleo" color={color} size={26} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          tabBarLabel: "About",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="account" color={color} size={26} />
+          ),
+        }}
+      />
+    </Tab.Navigator>
   );
 };
 
