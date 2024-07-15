@@ -80,8 +80,8 @@ const Profile = () => {
         <View style={{ marginTop: 20, alignItems: "center" }}>
           <Text>Teams Email ID's </Text>
           <Text style={{ color: "blue" }}>virkharmanjeet99@gmail.com</Text>
-          <Text style={{ color: "blue" }}>dummy@gmail.com</Text>
-          <Text style={{ color: "blue" }}>dummy@gmail.com</Text>
+          <Text style={{ color: "blue" }}>nehauchibassi91@gmail.com</Text>
+          <Text style={{ color: "blue" }}>lovedeepkaur7306@gmail.com</Text>
         </View>
       </View>
     </SafeAreaView>

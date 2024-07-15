@@ -6,7 +6,7 @@ import { containerStyle } from "../styles";
 
 const WelcomeImage = require("../../assets/img/welcome.jpg");
 
-const Welcome = () => {
+const Welcome = ({ navigation }) => {
   return (
     <>
       <ImageBackground
@@ -43,7 +43,9 @@ const Welcome = () => {
         </View>
 
         <View style={{ flex: 1, justifyContent: "center" }}>
-          <CustomButton title={"Get Started"}></CustomButton>
+          <CustomButton
+            navigation={navigation}
+            title={"Get Started"}></CustomButton>
         </View>
       </ImageBackground>
     </>
