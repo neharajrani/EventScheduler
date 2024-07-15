@@ -18,10 +18,16 @@
       "adaptiveIcon": {
         "foregroundImage": "",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.kuldeepkumar.EventScheduler"
     },
     "web": {
       "favicon": ""
+    },
+    "extra": {
+      "eas": {
+        "projectId": "047e5320-5655-4fee-8ea4-2d036e15a115"
+      }
     }
   }
 }
